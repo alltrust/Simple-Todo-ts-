@@ -1,15 +1,17 @@
-import React, { FC } from "react";
+import React, { FC, MouseEvent } from "react";
 import styles from './TodoItem.module.css'
 
 type TodoListItem = {
   // key: string;
-  text: string;
+  text: string
+  removeTodo: ()=> void
 };
 
-const TodoItem: FC<TodoListItem> = ({ text }) => {
+const TodoItem: FC<TodoListItem> = ({ text, removeTodo }) => {
+  
   return (
     <div className={styles.TodoItem}>
-      <li>{text}</li>
+      <li onClick={removeTodo}>{text}</li>
     </div>
   );
 };

@@ -1,7 +1,8 @@
-.listOfTodos{
-    width: 50%;
-    box-sizing: border-box;
-   
-
+.listOfTodos {
+  width: 50%;
 }
 
+.listOfTodos > ul {
+  padding: 0;
+  list-style-type: none;
+}
